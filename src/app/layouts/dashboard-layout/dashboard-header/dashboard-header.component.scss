@@ -1,0 +1,37 @@
+.dashboard-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: darkslategray;
+
+  h1 {
+    color: #fff;
+    margin: 0 10px;
+  }
+
+  ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0 10px;
+
+    li {
+      display: inline-block;
+      padding: 0 10px;
+
+      a {
+        color: #ccc;
+        text-decoration: none;
+
+        &:hover {
+          color: #fff;
+        }
+
+        &.active {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

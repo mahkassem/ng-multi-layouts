@@ -1,0 +1,14 @@
+<ng-container *ngFor="let order of orders">
+  <h3>Order: {{ order.number }}</h3>
+  <p>Order Date: {{ order.date | date: 'short' }}</p>
+  <p>Order Total: {{ order.total | currency: 'USD': 'symbol' }}</p>
+  <p>Order Status: {{ order.status }}</p>
+  <p>Order Items:</p>
+  <ul>
+    <li *ngFor="let item of order.items">
+      {{ item.name }} - {{ item.quantity }} x {{ item.price | currency: 'USD': 'symbol' }}
+    </li>
+  </ul>
+  <hr />
+</ng-container>
+<a routerLink="/dashboard">⬅️ Back</a>

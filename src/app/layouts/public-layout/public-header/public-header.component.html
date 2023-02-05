@@ -1,11 +1,12 @@
-<header class="public-header">
+<mat-toolbar class="public-header" color="primary">
   <h1>Store</h1>
   <ul>
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-    <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+    <li><a routerLink="/" mat-button routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon>home</mat-icon> Home</a></li>
+    <li><a routerLink="/products" mat-button routerLinkActive="active"><mat-icon>grid_view</mat-icon> Products</a></li>
   </ul>
   <span class="spacer"></span>
   <ul>
-    <li><a routerLink="/dashboard" routerLinkActive="active">My Store</a></li>
+    <li><a routerLink="/dashboard" mat-button routerLinkActive="active">My Store</a></li>
   </ul>
-</header>
+</mat-toolbar>

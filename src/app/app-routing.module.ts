@@ -15,10 +15,14 @@ const routes: Routes = [
         (m) => m.DashboardModule,
       ),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
+  }
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
